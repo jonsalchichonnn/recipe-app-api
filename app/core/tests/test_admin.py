@@ -23,7 +23,7 @@ class AdminSiteTests(TestCase):
         # reversse() generates the url for us so we dont
         # have to hardcode the url
         url = reverse('admin:core_user_changelist')
-        res = self.client.get(url) # HTTP get connection
+        res = self.client.get(url)  # HTTP get connection
 
         self.assertContains(res, self.user.name)
         self.assertContains(res, self.user.email)
