@@ -7,7 +7,7 @@ from core import models
 
 class UserAdmin(BaseUserAdmin):
     ordering = ['id']
-    list_desplay = ['email', 'name']
+    list_display = ['email', 'name']
     # sections
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
