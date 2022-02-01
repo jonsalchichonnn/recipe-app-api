@@ -22,5 +22,6 @@ class ManageUserView(generics.RetrieveUpdateAPIView):
     authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
 
+    # overwritten to retrieve only logged in users
     def get_object(self):
         return self.request.user
